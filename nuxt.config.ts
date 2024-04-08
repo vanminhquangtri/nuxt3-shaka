@@ -1,8 +1,6 @@
-import nitroPublic from 'nitro-public-module';
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   app: {
     head: {
       script: [
@@ -23,8 +21,5 @@ export default defineNuxtConfig({
         },
       ],
     },
-  },
-  nitro: {
-    modules: [nitroPublic()],
   },
 });

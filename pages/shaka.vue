@@ -7,6 +7,7 @@
       controls
       autoplay
       muted
+      style="max-width: 100%"
     ></video>
   </div>
 </template>
@@ -23,9 +24,11 @@ const manifestUri =
 
 function initApp() {
   // Install built-in polyfills to patch browser incompatibilities.
+  /*@ts-ignore*/
   shaka.polyfill.installAll();
 
   // Check to see if the browser supports the basic APIs Shaka needs.
+  /*@ts-ignore*/
   if (shaka.Player.isBrowserSupported()) {
     // Everything looks good!
     initPlayer();
@@ -38,10 +41,12 @@ function initApp() {
 async function initPlayer() {
   // Create a Player instance.
   const video = document.getElementById('video');
+  /*@ts-ignore*/
   const player = new shaka.Player();
   await player.attach(video);
 
   // Attach player to the window to make it easy to access in the JS console.
+  /*@ts-ignore*/
   window.player = player;
 
   // Listen for error events.
@@ -58,12 +63,12 @@ async function initPlayer() {
     onError(e);
   }
 }
-
+/*@ts-ignore*/
 function onErrorEvent(event) {
   // Extract the shaka.util.Error object from the event.
   onError(event.detail);
 }
-
+/*@ts-ignore*/
 function onError(error) {
   // Log the error.
   console.error('Error code', error.code, 'object', error);
