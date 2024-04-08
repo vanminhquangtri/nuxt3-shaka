@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test-build": "node .output/server/index.mjs"
+    "test-build": "node .output/server/index.mjs",
+    "product": "npx serve .output/public"
   },
   "dependencies": {
     "nuxt": "^3.11.1",
