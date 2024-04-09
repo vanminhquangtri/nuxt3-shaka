@@ -8,6 +8,7 @@
       autoplay
       playsinline
       ref="video"
+      style="max-width: 100%"
     ></video>
   </div>
 </template>

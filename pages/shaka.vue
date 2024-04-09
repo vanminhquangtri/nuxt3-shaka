@@ -16,8 +16,10 @@
 // const manifestUri =
 //   'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
 
-const manifestUri =
-  '/stream/terminator-3-rise-of-the-machines-2003-us-1705385000/master.m3u8';
+// const manifestUri =
+//   '/stream/terminator-3-rise-of-the-machines-2003-us-1705385000/master.m3u8';
+
+const manifestUri = '/stream/videos/output.m3u8';
 
 // const manifestUri =
 //   '/stream/terminator-3-rise-of-the-machines-2003-us-1705385000/stream.mpd';
