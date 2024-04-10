@@ -13,7 +13,8 @@
 </template>
 
 <script lang="ts" setup>
-const manifestUri = '/stream/surfs-up-2007-us-1705494900/master.m3u8';
+const manifestUri =
+  'https://vod06-cdn.fptplay.net/POVOD/encoded/2024/01/28/theaccidentalspy-2001-hk-1706408052/master.m3u8';
 
 const video = ref(null);
 
