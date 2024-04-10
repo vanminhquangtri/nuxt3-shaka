@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test-build": "node .output/server/index.mjs",
-    "product": "npx serve .output/public"
+    "product": "npx serve .output/public",
+    "start": "node .output/server/index.mjs"
   },
   "dependencies": {
     "nuxt": "^3.11.1",

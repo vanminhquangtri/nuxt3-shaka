@@ -1,28 +1,11 @@
 <template>
-  <div>
-    <video
-      id="video"
-      width="640"
-      poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
-      controls
-      autoplay
-      muted
-      style="max-width: 100%"
-    ></video>
+  <div class="video-container">
+    <video id="video" width="640" controls autoplay muted playsinline></video>
   </div>
 </template>
 
 <script setup lang="ts">
-// const manifestUri =
-//   'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
-
-// const manifestUri =
-//   '/stream/terminator-3-rise-of-the-machines-2003-us-1705385000/master.m3u8';
-
-const manifestUri = '/stream/videos/output.m3u8';
-
-// const manifestUri =
-//   '/stream/terminator-3-rise-of-the-machines-2003-us-1705385000/stream.mpd';
+const manifestUri = '/stream/surfs-up-2007-us-1705494900/master.m3u8';
 
 function initApp() {
   // Install built-in polyfills to patch browser incompatibilities.

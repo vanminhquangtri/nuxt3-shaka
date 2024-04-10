@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="video-container">
     <video
       width="640"
       id="vid"
@@ -8,20 +8,13 @@
       autoplay
       playsinline
       ref="video"
-      style="max-width: 100%"
     ></video>
   </div>
 </template>
 
 <script lang="ts" setup>
-// const manifestUri =
-//   'https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd';
+const manifestUri = '/stream/surfs-up-2007-us-1705494900/master.m3u8';
 
-const manifestUri =
-  '/stream/terminator-3-rise-of-the-machines-2003-us-1705385000/master.m3u8';
-
-// const manifestUri =
-//   '/stream/terminator-3-rise-of-the-machines-2003-us-1705385000/stream.mpd';
 const video = ref(null);
 
 const initPlayer = () => {
