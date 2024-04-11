@@ -13,15 +13,7 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "@bootstrap-vue-next/nuxt": "^0.16.6",
-    "@nuxt/image": "^1.4.0",
-    "@pinia/nuxt": "^0.5.1",
-    "bootstrap": "^5.3.3",
-    "bootstrap-vue-next": "^0.16.6",
-    "m3u8-parser": "^7.1.0",
     "nuxt": "^3.11.2",
-    "nuxt-swiper": "^1.2.2",
-    "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
