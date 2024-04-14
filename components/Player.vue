@@ -1,6 +1,6 @@
 <template>
   <div class="video-container">
-    <video id="video" width="640" controls autoplay muted playsinline></video>
+    <video id="video" width="640" controls autoplay playsinline></video>
   </div>
 </template>
 

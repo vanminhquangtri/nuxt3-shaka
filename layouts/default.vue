@@ -2,8 +2,8 @@
   <div>
     <div class="nav-container">
       <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/shaka">Shaka Player</NuxtLink>
-      <NuxtLink to="/videojs">Video.js Player</NuxtLink>
+      <NuxtLink to="/shaka/movie_1">Movie 1</NuxtLink>
+      <NuxtLink to="/shaka/movie_2">Movie 2</NuxtLink>
     </div>
     <slot />
   </div>
