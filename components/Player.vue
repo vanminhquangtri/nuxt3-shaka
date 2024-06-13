@@ -83,7 +83,6 @@ const LIVE_NON_DRM_CONFIG: object = {
   },
 };
 const video = ref<HTMLVideoElement | null>(null);
-const error = ref('');
 const manifestUri =
   'https://vod06-cdn.fptplay.net/POVOD/encoded/2024/01/28/theaccidentalspy-2001-hk-1706408052/master.m3u8';
 
