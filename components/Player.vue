@@ -52,6 +52,10 @@
       </div>
     </div>
   </div>
+
+  <div></div>
+
+  <div v-html="error" />
 </template>
 
 <script setup lang="ts">
@@ -78,6 +82,10 @@ const LIVE_NON_DRM_CONFIG: object = {
     enabled: true,
   },
 };
+const video = ref<HTMLVideoElement | null>(null);
+const error = ref('');
+const manifestUri =
+  'https://vod06-cdn.fptplay.net/POVOD/encoded/2024/01/28/theaccidentalspy-2001-hk-1706408052/master.m3u8';
 
 const url = ref(
   'https://vod03-cdn.fptplay.net/POVOD/encoded/2024/04/10/vayhamkhongloithoat-theroundupnowayout-2023-ms-1712745686/H264/master.m3u8',
@@ -169,6 +177,48 @@ async function initPlayer() {
     onError(e);
   }
 }
+const listenPlayer = () => {
+  /*@ts-ignore*/
+  const eventManager = new window.shaka.util.EventManager();
+  eventManager.listenOnce(video.value, `play`, (ev: any) => {
+    playVideo(ev);
+  });
+  eventManager.listenOnce(video.value, `playing`, () => {
+    if (video.value) {
+      // video.value.volume = 1;
+    }
+  });
+};
+
+const playVideo = (ev: any) => {
+  error.value = error.value + '<br/>' + ' playVideo ' + ev.type;
+  if (!video.value) {
+    return;
+  }
+
+  try {
+    const promise = video.value.play();
+    if (promise) {
+      promise
+        .then(() => {
+          console.log('play success');
+        })
+        .catch((e) => {
+          console.log('ERROR auto play', e);
+          error.value = e.message;
+          if (video.value) {
+            video.value.muted = true;
+            playVideo(ev);
+          }
+        });
+    } else {
+      error.value = 'no promise';
+    }
+  } catch (e: any) {
+    error.value = e.message;
+  }
+};
+
 /*@ts-ignore*/
 function onErrorEvent(event) {
   // Extract the shaka.util.Error object from the event.
